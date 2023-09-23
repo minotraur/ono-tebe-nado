@@ -4,7 +4,7 @@
   --font-color-black: black;
   --font-color-white: white;
   --font-size-xs: 18px;
-  --font-size-s: 18px;
+  --font-size-s: 20px;
   --font-size-m: 22px;
   --font-size-l: 40px;
   --font-size-xl: 100px;
@@ -225,8 +225,6 @@
   position: relative;
   color: var(--font-color-white);
   font-size: var(--font-size-s);
-  line-height: 132%;
-  letter-spacing: 0.06em;
   text-decoration-line: none;
 }
 
@@ -247,7 +245,6 @@
   margin: 30px 0 0 40px;
   border-bottom: 1px solid black;
   font-size: var(--font-size-s);
-  letter-spacing: 0.06em;
   text-decoration: none;
 }
 
@@ -265,7 +262,6 @@
   grid-template-columns: 430px 1fr 1fr;
   grid-template-areas:
     "about__logo about__title about__title"
-    ". about__text about__text"
     ". about__text about__text";
   column-gap: 25px;
 }
@@ -291,7 +287,6 @@
 .about__title {
   grid-area: about__title;
   align-self: center;
-  /* margin-top: 9px; */
   color: var(--font-color-black);
   font-weight: bold;
   font-size: var(--font-size-l);
@@ -307,8 +302,7 @@
   color: var(--font-color-black);
   font-weight: 400;
   font-size: var(--font-size-s);
-  line-height: 140%;
-  letter-spacing: 0.06em;
+  margin-top: 5px;
 }
 
 /* Конец about секции */
