@@ -36,12 +36,14 @@
 .header__link,
 .footer__menu-link {
   width: max-content;
+  border-bottom: 1px solid black;
   font-size: var(--font-size-xs);
   text-decoration: none;
 }
 
-.header__link_active {
-  border-bottom: 1px solid black;
+.header__link_active,
+.footer__menu-link_active {
+  border-bottom: none;
 }
 
 .header__logo-image {
@@ -69,7 +71,6 @@
 
 .cover {
   position: relative;
-  /* min-height: 757px; */
   padding: 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
@@ -142,7 +143,7 @@
   height: 52px;
   border: 1px solid #fff;
   color: var(--font-color-white);
-  font-family: 'Raleway';
+  font-family: "Raleway", Arial, sans-serif;
   font-size: var(--font-size-m);
   text-transform: uppercase;
   background: transparent;
@@ -264,10 +265,9 @@
   grid-template-columns: 430px 1fr 1fr;
   grid-template-areas:
     "about__logo about__title about__title"
-    ". about__text-top about__text-top"
-    ". about__text-bottom about__text-bottom";
+    ". about__text about__text"
+    ". about__text about__text";
   column-gap: 25px;
-  min-height: 487px;
 }
 
 .about__logo {
@@ -291,27 +291,24 @@
 .about__title {
   grid-area: about__title;
   align-self: center;
-  margin-top: 9px;
+  /* margin-top: 9px; */
   color: var(--font-color-black);
   font-weight: bold;
   font-size: var(--font-size-l);
   text-transform: uppercase;
 }
 
-.about__text-top,
-.about__text-bottom {
-  grid-area: about__text-top;
-  margin-top: 5px;
+.about__text {
+  display: flex;
+  flex-direction: column;
+  grid-area: about__text;
+  justify-content: flex-start;
+  row-gap: 25px;
   color: var(--font-color-black);
   font-weight: 400;
   font-size: var(--font-size-s);
   line-height: 140%;
   letter-spacing: 0.06em;
-}
-
-.about__text-bottom {
-  grid-area: about__text-bottom;
-  margin-top: 20px;
 }
 
 /* Конец about секции */
@@ -339,11 +336,6 @@
 .footer__social-list-item {
   width: 48px;
   height: 48px;
-}
-
-.footer__menu-link_active {
-  width: max-content;
-  border-bottom: 1px solid black;
 }
 
 /* Конец footer секции */
