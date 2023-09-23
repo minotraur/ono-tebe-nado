@@ -24,11 +24,13 @@
   list-style-type: circle;
 }
 
-.header__links-list-item_no-bullit {
+.header__links-list-item_no-bullit,
+.footer__menu-list-item {
   list-style-type: none;
 }
 
-.header__link {
+.header__link,
+.footer__menu-link {
   width: max-content;
   font-size: var(--font-size);
   text-decoration: none;
@@ -296,3 +298,35 @@
   font-size: 20px;
 }
 /* Конец about секции */
+
+/* Footer секция */
+
+.footer {
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px 90px 50px;
+}
+
+.footer__menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__social-list {
+  display: flex;
+  column-gap: 48px;
+}
+
+.footer__social-list-item {
+  width: 48px;
+  height: 48px;
+}
+
+.footer__menu-link_active {
+  border-bottom: 1px solid black;
+  width: max-content;
+}
+
+/* Конец footer секции */
