@@ -153,7 +153,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 579px;
   margin: 180px 50px;
 }
 
@@ -297,6 +296,7 @@
   font-weight: 400;
   font-size: 20px;
 }
+
 /* Конец about секции */
 
 /* Footer секция */
