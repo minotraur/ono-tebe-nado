@@ -172,9 +172,9 @@
 }
 
 .lots__card-list-item {
+  flex-grow: 1;
   width: 430px;
   min-height: 450px;
-  flex-grow: 1;
 }
 
 .card-link {
@@ -218,26 +218,81 @@
 .card__text {
   position: relative;
   color: var(--font-color-white);
-  text-decoration-line: none;
   font-size: 20px;
+  text-decoration-line: none;
 }
 
 .card_type_film {
   background-image: url(/images/card-lot-01.jpg);
 }
+
 .card_type_book {
   background-image: url(/images/card-lot-02.jpg);
 }
+
 .card_type_picture {
   background-image: url(/images/card-lot-03.jpg);
 }
 
 .lots__look-more-link {
+  width: max-content;
   margin-left: 40px;
+  border-bottom: 1px solid black;
   font-size: 20px;
   text-decoration: none;
-  border-bottom: 1px solid black;
-  width: max-content;
 }
 
 /* Конец lots секции */
+
+/* About секция */
+
+.about {
+  margin-top: 181px;
+  padding: 0 50px;
+}
+
+.about__column {
+  display: grid;
+  grid-template-columns: 430px 1fr 1fr;
+  grid-template-areas:
+    "about__logo about__title about__title"
+    ". about__text about__text"
+    ". about__text about__text";
+  column-gap: 25px;
+  height: 487px;
+}
+
+.about__logo {
+  display: flex;
+  grid-area: about__logo;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  background: #000;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+  object-fit: cover;
+}
+
+.about__title {
+  grid-area: about__title;
+  align-self: center;
+  color: var(--font-color-black);
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.about__text {
+  grid-area: about__text;
+  color: var(--font-color-black);
+  font-weight: 400;
+  font-size: 20px;
+}
+/* Конец about секции */
